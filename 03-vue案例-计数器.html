@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>计数器</title>
+</head>
+<body>
+<div id="app">
+  <h2>当前计数：{{mount}}</h2>
+  <button v-on:click="add">+</button>
+  <button v-on:click="decrease">-</button>
+</div>
+
+<script src="../vue2.x.js"></script>
+<script>
+  const app = new Vue({
+    el : "#app",
+    data : {
+      mount : 0
+    },
+    methods : {
+      add : function () {
+        console.log("add被执行");
+        this.mount++;
+      },
+      decrease : function () {
+        console.log("decrease被执行");
+        this.mount--;
+      }
+    }
+    //1.拿button监听事件
+    //2.添加监听事件
+  })
+</script>
+</body>
+</html>
