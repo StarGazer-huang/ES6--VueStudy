@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <a v-bind:href="aHref">百度搜索</a>
+</div>
+
+<script src="../vue2.x.js"></script>
+<script>
+  const app = new Vue({
+    el : "#app",
+    data : {
+      aHref : "www.baidu.com"
+    },
+    methods : {}
+  })
+</script>
+</body>
+</html>
