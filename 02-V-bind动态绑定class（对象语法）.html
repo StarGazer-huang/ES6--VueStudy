@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .active{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <h2 @click="color" v-bind:class="{active : isLive}">{{message}}</h2>
+<!--  <button v-on:click="color">变红色</button>-->
+</div>
+
+<script src="../vue2.x.js"></script>
+<script>
+  const app = new Vue({
+    el : "#app",
+    data : {
+      message : "Hello",
+      isLive : false
+    },
+    methods : {
+      color: function () {
+        this.isLive = !this.isLive
+      }
+    }
+  })
+</script>
+</body>
+</html>
